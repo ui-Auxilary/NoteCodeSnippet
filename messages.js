@@ -4,11 +4,11 @@ export class Messages {
   }
 
   /** Sends a message on a channel using a stored template. */
-  create({ channel, to, templateId, variables }) {
+  create({ channel, to, template, variables }) {
     return this.client.post('/v1/messages', {
       channel,
       to,
-      template_id: templateId,
+      template_id: template,
       variables,
     });
   }
